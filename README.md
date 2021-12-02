@@ -1,4 +1,4 @@
-# SuperHero App
+# Dependency Injection App
 
 This application shows the differences of AddTransient, AddScoped and AddSingleton Services
 
