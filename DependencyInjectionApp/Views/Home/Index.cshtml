@@ -3,6 +3,60 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Lifetimes</h1>
+    <div class="row text-left">
+        <div class="col-12">
+            Controller Home
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Transient</div>
+        <div class="col-5 text-left">@ViewBag.Transient.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Scoped</div>
+        <div class="col-5 text-left">@ViewBag.Scoped.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Singleton</div>
+        <div class="col-5 text-left">@ViewBag.Singleton.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Instance</div>
+        <div class="col-5 text-left">@ViewBag.SingletonInstance.OperationId</div>
+    </div>
+
+    <div class="row text-left">
+        <div class="col-12">
+            Operation Services Home
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Transient</div>
+        <div class="col-5 text-left">@ViewBag.Service.OperationTransient.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Scoped</div>
+        <div class="col-5 text-left">@ViewBag.Service.OperationScoped.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Singleton</div>
+        <div class="col-5 text-left">@ViewBag.Service.OperationSingleton.OperationId</div>
+    </div>
+    <div class="row">
+        <div class="col-3 font-weight-bold">Instance</div>
+        <div class="col-5 text-left">@ViewBag.Service.OperationSingletonInstance.OperationId</div>
+    </div>
+
+    <br/>
+    <div class="row">
+        <div class="col-10 text-left">
+            <ul>
+                <li>Transient objects are always different. A new instance is provided to every controller and every service.</li>
+                <li>Scoped objects are the same within a request, but different across different requests</li>
+                <li>Singleton objects are the same for every object and every request</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
